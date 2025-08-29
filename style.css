@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(212, 45%, 89%);
+    min-height: 100vh; /* Evita problema em telas pequenas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main {
+    margin: 20px; /* Adiciona espaçamento lateral para telas pequenas */
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 320px; /* Limita largura máxima para desktops */
+    height: auto;      
+    box-sizing: border-box; /* Garante que padding não quebre o layout */
+}
+
+.qr-code { 
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto; /* Mantém proporção da imagem */
+    border-radius: 10px;
+    display: block; /* Evita espaçamento indesejado abaixo da imagem */
+}
+
+.info {
+    font-family: "League Spartan", sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 15px;
+    color: hsl(216, 15%, 48%);
+    margin: 5px 0;
+}
+
+h3 {
+    margin: 10px 0 5px 0;
+    font-size: 18px;
+}
+
+/* --- Tornando responsivo --- */
+@media (max-width: 480px) {
+    main {
+        max-width: 90%; /* Ocupa quase toda a largura no celular */
+        margin: 10px; /* Garante espaçamento lateral */
+    }
+
+    p {
+        font-size: 14px; /* Texto um pouco menor */
+    }
+
+    h3 {
+        font-size: 16px; /* Ajuste do título */
+    }
+}
